@@ -1,0 +1,19 @@
+package local:calculator
+
+interface add {
+    add: func(x: s32, y: s32) -> s32
+}
+
+world operator {
+    export add
+}
+
+world calculator {
+    import add
+    export eval: interface {
+        enum op {
+            add
+        }
+        do: func(op: op, x: s32, y:s32) -> s32
+    }
+}
