@@ -1,7 +1,8 @@
-# wasm-tools compose -c config.yml calculator.wasm
+# wasm-tools compose -c config.yml -o composed.wasm calculator.wasm
 
 search-paths:
   - operator/target/wasm32-wasi/release
+  - calculator/target/wasm32-wasi/release
 
 instantiations:
   $input:

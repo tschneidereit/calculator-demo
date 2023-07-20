@@ -14,6 +14,6 @@ world calculator {
         enum op {
             add
         }
-        do: func(op: op, x: s32, y:s32) -> s32
+        calc: func(op: op, x: s32, y:s32) -> s32
     }
 }

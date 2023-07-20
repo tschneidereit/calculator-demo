@@ -1,0 +1,17 @@
+spin_manifest_version = "1"
+authors = ["Till Schneidereit <till@tillschneidereit.net>"]
+description = ""
+name = "tst"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = ""
+source = "api/target/wasm32-wasi/release/api.wasm"
+
+allowed_http_hosts = []
+[component.trigger]
+route = "/..."
+
+[component.build]
+command = "cd api && cargo component build"
