@@ -1,0 +1,7 @@
+search-paths:
+  - dist
+
+instantiations:
+  $input:
+    arguments:
+      calculator-eval: calculator
