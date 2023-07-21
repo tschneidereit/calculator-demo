@@ -28,12 +28,12 @@ fn calculate(req: fermyon::spin::http_types::Request) -> Result<Response> {
         _ => anyhow::bail!("Unknown operation: {}", params.op)
     };
 
-    let result = calc(op, params.x, params.y);
+    let (result, desc) = calc(op, params.x, params.y, "An operation");
 
     Ok(Response {
         status: 200,
         headers: None,
-        body: Some(format!("Result of operation '{}' with values `{}`,`{}`: {result}", params.op, params.x, params.y).into_bytes()),
+        body: Some(format!("Result of operation '{}' with values `{}`,`{}`: {result} ({desc})", params.op, params.x, params.y).into_bytes()),
     })
 }
 

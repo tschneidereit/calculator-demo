@@ -6,10 +6,6 @@ edition = "2021"
 [lib]
 crate-type = [ "cdylib" ]
 
-[package.metadata.component]
-# package = "local:api"
-# target = { path = "../wit/deps/spin", world = "http-trigger" }
-
 [package.metadata.component.dependencies]
 "local:calculator" = { path = "../target/wasm32-wasi/release/calculator.wasm" }
 
