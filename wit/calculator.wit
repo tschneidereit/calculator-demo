@@ -4,7 +4,7 @@ interface add {
     add: func(x: s32, y: s32) -> s32
 }
 
-world operator {
+world add-operator {
     export add
 }
 
@@ -12,8 +12,8 @@ world calculator {
     import add
     export eval: interface {
         enum op {
-            add
+            add,
         }
-        calc: func(op: op, x: s32, y:s32) -> s32
+        calc: func(op: op, x: s32, y: s32) -> s32
     }
 }

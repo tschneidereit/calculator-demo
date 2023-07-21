@@ -1,0 +1,5 @@
+[workspace]
+members = ["calculator", "operators/add", "api"]
+
+[workspace.dependencies]
+wit-bindgen = { version = "0.9.0" }

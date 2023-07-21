@@ -7,11 +7,11 @@ version = "0.1.0"
 
 [[component]]
 id = ""
-source = "api/target/wasm32-wasi/release/api.wasm"
+source = "dist/api.wasm"
 
 allowed_http_hosts = []
 [component.trigger]
 route = "/..."
 
 [component.build]
-command = "cd api && cargo component build"
+command = "./build.sh"
