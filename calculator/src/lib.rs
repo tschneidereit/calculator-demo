@@ -1,11 +1,12 @@
 use bindings::exports::eval::{Op, Eval};
-use bindings::local::calculator::add;
+use bindings::local::calculator::{sub, add};
 
 struct Component;
 impl Eval for Component {
     fn calc(op: Op, x: i32, y: i32) -> i32 {
         match op {
             Op::Add => add::add(x, y),
+            Op::Sub => sub::sub(x, y),
         }
     }
 }

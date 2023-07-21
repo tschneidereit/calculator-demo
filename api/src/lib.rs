@@ -25,6 +25,7 @@ fn calculate(req: fermyon::spin::http_types::Request) -> Result<Response> {
     let params: QueryParams = serde_qs::from_str(query)?;
     let op = match params.op.as_ref() {
         "add" => Op::Add,
+        "sub" => Op::Sub,
         _ => anyhow::bail!("Unknown operation: {}", params.op)
     };
 

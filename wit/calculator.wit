@@ -8,11 +8,21 @@ world add-operator {
     export add
 }
 
+interface sub {
+    sub: func(x: s32, y: s32) -> s32
+}
+
+world sub-operator {
+    export sub
+}
+
 world calculator {
     import add
+    import sub
     export eval: interface {
         enum op {
             add,
+            sub,
         }
         calc: func(op: op, x: s32, y: s32) -> s32
     }

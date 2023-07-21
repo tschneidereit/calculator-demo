@@ -5,6 +5,7 @@ mkdir -p "dist/local:calculator"
 
 (cd calculator && cargo component build --release)
 (cd operators/add && cargo component build --release)
+jco componentize -w wit -n sub-operator -o dist/local:calculator/sub.wasm operators/sub/sub.js
 (cd api && cargo component build --release)
 
 cp "target/wasm32-wasi/release/calculator.wasm" "dist"
